@@ -35,7 +35,7 @@ body{margin:0;background:var(--bg);color:var(--fg);transition:background .3s,col
 .theme-toggle{background:transparent;border:1px solid var(--border-color);padding:6px 8px;border-radius:6px;cursor:pointer;font-size:16px;transition:border-color .3s;white-space:nowrap}
 .theme-toggle:hover{border-color:var(--accent)}
 .socials a{display:inline-flex;align-items:center;gap:8px;margin-right:10px;color:var(--accent);text-decoration:none}
-.socials a svg{width:20px;height:20px;display:inline-block;flex-shrink:0}
+.socials a svg{width:40px;height:40px;display:inline-block;flex-shrink:0}
 .center{display:flex;flex-direction:column;justify-content:space-between;align-items:center;grid-column:span 6;min-height:0} 
 .logo-wrap{display:flex;justify-content:center;margin-bottom:14px}
 .logo svg{max-width:320px;width:60%;height:auto;display:block;color:var(--fg);transition:color .25s;fill:currentColor}
