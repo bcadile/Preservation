@@ -34,16 +34,16 @@ body{margin:0;background:var(--bg);color:var(--fg);transition:background .3s,col
 .left .subhead{color:var(--text-muted);margin:0 0 12px;transition:color .3s}
 .theme-toggle{background:transparent;border:1px solid var(--border-color);padding:6px 8px;border-radius:6px;cursor:pointer;font-size:16px;transition:border-color .3s;white-space:nowrap}
 .theme-toggle:hover{border-color:var(--accent)}
-  .socials a{display:inline-flex;align-items:center;gap:8px;margin-right:10px;color:var(--accent);text-decoration:none}
-  .socials a svg{width:20px;height:20px;display:inline-block;flex-shrink:0}
+.socials a{display:inline-flex;align-items:center;gap:8px;margin-right:10px;color:var(--accent);text-decoration:none}
+.socials a svg{width:20px;height:20px;display:inline-block;flex-shrink:0}
 .center{display:flex;flex-direction:column;justify-content:space-between;align-items:center;grid-column:span 6;min-height:0} 
 .logo-wrap{display:flex;justify-content:center;margin-bottom:14px}
 .logo svg{max-width:320px;width:60%;height:auto;display:block;color:var(--fg);transition:color .25s;fill:currentColor}
-  .player{width:100%;max-width:620px;position:relative;margin:auto 0}
-  /* Temporary on-screen hint for shortcuts and actions */
-  .hint{position:absolute;left:50%;top:8px;transform:translateX(-50%) translateY(-6px);background:rgba(0,0,0,0.85);color:#fff;padding:7px 12px;border-radius:8px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .12s,transform .12s;z-index:10;border:1px solid rgba(255,255,255,0.04)}
-  .hint.visible{opacity:1;transform:translateX(-50%) translateY(0)}
-  body.dark .hint{background:rgba(255,255,255,0.08);color:var(--fg);border-color:rgba(255,255,255,0.06)}
+.player{width:100%;max-width:620px;position:relative;margin:auto 0}
+/* Temporary on-screen hint for shortcuts and actions */
+.hint{position:absolute;left:50%;top:8px;transform:translateX(-50%) translateY(-6px);background:rgba(0,0,0,0.85);color:#fff;padding:7px 12px;border-radius:8px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .12s,transform .12s;z-index:10;border:1px solid rgba(255,255,255,0.04)}
+.hint.visible{opacity:1;transform:translateX(-50%) translateY(0)}
+body.dark .hint{background:rgba(255,255,255,0.08);color:var(--fg);border-color:rgba(255,255,255,0.06)}
 .player h2{margin:0 0 12px}
 .controls{display:flex;gap:12px;align-items:center;margin:12px 0}
 .btn{background:var(--accent);color:#fff;border:0;padding:8px 14px;border-radius:6px;cursor:pointer}
