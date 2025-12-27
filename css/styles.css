@@ -29,7 +29,7 @@ body{margin:0;background:var(--bg);color:var(--fg);transition:background .3s,col
 .left-header{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 
 /* Center left column vertically on taller viewports */
-.left{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;grid-column:span 4} 
+.left{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;grid-column:span 3} 
 .left h1{margin:0 0 6px;font-size:22px}
 .left .subhead{color:var(--text-muted);margin:0 0 12px;transition:color .3s}
 .theme-toggle{background:transparent;border:1px solid var(--border-color);padding:6px 8px;border-radius:6px;cursor:pointer;font-size:16px;transition:border-color .3s;white-space:nowrap}
@@ -62,7 +62,7 @@ body.dark .progress{background:rgba(255,255,255,.1)}
 .change-file input[type=file]{display:none}
 .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap} 
 
-.right{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;grid-column:span 2;min-height:150px} 
+.right{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;grid-column:span 3;min-height:150px} 
 
 .support-section{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
 .support-section h3{margin:0 0 6px;font-size:16px}
