@@ -14,4 +14,4 @@ A minimal single-purpose web app that streams ambient recordings from Preservati
 ## Notes
 
 - The page uses an HTML5 `<audio>` element; supported formats depend on the browser (commonly: MP3, M4A/AAC, OGG, WAV).
-- Users select only between the two bundled recordings — uploading arbitrary files was intentionally removed.
+- Users select only between the two bundled recordings.
