@@ -66,6 +66,9 @@ body.dark .progress{background:rgba(255,255,255,.1)}
 
 .support-section{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
 .support-section h3{margin:0 0 6px;font-size:16px}
+.repo-note{font-size:13px;color:var(--text-dim);transition:color .3s}
+.repo-note a{color:var(--accent);text-decoration:none}  
+
 .support-link{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;display:inline-block}
 .support-link:hover{opacity:0.95}
 .shortcuts{margin-top:12px;color:var(--text-dim)}
