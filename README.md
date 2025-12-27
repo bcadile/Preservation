@@ -1,6 +1,6 @@
 # Viva la Preservation Coffee — Ambient Player
 
-A minimal single-purpose web app that streams ambient recordings from Preservation Coffee & Tea on loop.
+A minimal web app that streams ambient recordings from Preservation Coffee & Tea.
 
 ## What it does
 
