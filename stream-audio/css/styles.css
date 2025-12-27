@@ -1,0 +1,88 @@
+/* Basic three-column layout */
+:root{
+  --left-width:240px;
+  --right-width:240px;
+  --gap:18px;
+  --accent:#0078d4;
+  --bg:#f6f8fa;
+  --fg:#111;
+  --card-bg:#fff;
+  --card-shadow:0 1px 4px rgba(0,0,0,.06);
+  --border-color:#ddd;
+  --text-muted:#555;
+  --text-dim:#666;
+}
+body.dark{
+  --bg:#1a1a1a;
+  --fg:#e8e8e8;
+  --card-bg:#2d2d2d;
+  --card-shadow:0 1px 4px rgba(0,0,0,.3);
+  --border-color:#444;
+  --text-muted:#aaa;
+  --text-dim:#999;
+}
+*{box-sizing:border-box;font-family:Segoe UI,Roboto,Arial,sans-serif}
+/* Make the page a column flex layout so footer stays visible while the main container can scroll internally */
+body{margin:0;background:var(--bg);color:var(--fg);transition:background .3s,color .3s;min-height:100vh;display:flex;flex-direction:column}
+.container{flex:1;display:grid;grid-template-columns:repeat(12, 1fr);gap:var(--gap);padding:30px;overflow:auto} 
+.col{background:var(--card-bg);padding:20px;border-radius:8px;box-shadow:var(--card-shadow);transition:background .3s,box-shadow .3s}
+.left-header{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+
+/* Center left column vertically on taller viewports */
+.left{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;grid-column:span 4} 
+.left h1{margin:0 0 6px;font-size:22px}
+.left .subhead{color:var(--text-muted);margin:0 0 12px;transition:color .3s}
+.theme-toggle{background:transparent;border:1px solid var(--border-color);padding:6px 8px;border-radius:6px;cursor:pointer;font-size:16px;transition:border-color .3s;white-space:nowrap}
+.theme-toggle:hover{border-color:var(--accent)}
+  .socials a{display:inline-flex;align-items:center;gap:8px;margin-right:10px;color:var(--accent);text-decoration:none}
+  .socials a svg{width:20px;height:20px;display:inline-block;flex-shrink:0}
+.center{display:flex;flex-direction:column;justify-content:space-between;align-items:center;grid-column:span 6;min-height:0} 
+.logo-wrap{display:flex;justify-content:center;margin-bottom:14px}
+.logo svg{max-width:320px;width:60%;height:auto;display:block;color:var(--fg);transition:color .25s;fill:currentColor}
+  .player{width:100%;max-width:620px;position:relative;margin:auto 0}
+  /* Temporary on-screen hint for shortcuts and actions */
+  .hint{position:absolute;left:50%;top:8px;transform:translateX(-50%) translateY(-6px);background:rgba(0,0,0,0.85);color:#fff;padding:7px 12px;border-radius:8px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .12s,transform .12s;z-index:10;border:1px solid rgba(255,255,255,0.04)}
+  .hint.visible{opacity:1;transform:translateX(-50%) translateY(0)}
+  body.dark .hint{background:rgba(255,255,255,0.08);color:var(--fg);border-color:rgba(255,255,255,0.06)}
+.player h2{margin:0 0 12px}
+.controls{display:flex;gap:12px;align-items:center;margin:12px 0}
+.btn{background:var(--accent);color:#fff;border:0;padding:8px 14px;border-radius:6px;cursor:pointer}
+.btn:active{transform:translateY(1px)}
+input[type=range]{width:180px}
+.loop-label{display:inline-flex;align-items:center;gap:8px;color:var(--fg);transition:color .3s}
+.progress-wrap{margin-top:12px}
+.progress{background:rgba(0,0,0,.1);border-radius:6px;height:12px;cursor:pointer;position:relative;transition:background .3s}
+body.dark .progress{background:rgba(255,255,255,.1)}
+#progress-bar{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#4fc3f7);border-radius:6px}
+.time{font-size:12px;color:var(--text-dim);margin-top:6px;transition:color .3s}
+.status{margin-top:8px;font-size:13px;color:var(--text-muted);transition:color .3s}
+.source-row{display:flex;align-items:center;justify-content:space-between;margin-top:10px;gap:10px}
+.source{font-size:13px;color:var(--fg);transition:color .3s}
+.change-file{background:transparent;border:1px solid var(--border-color);padding:6px 10px;border-radius:6px;cursor:pointer;color:var(--accent);display:inline-flex;align-items:center;gap:8px;transition:border-color .3s}
+.change-file input[type=file]{display:none}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap} 
+
+.right{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;grid-column:span 2;min-height:150px} 
+
+.support-section{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.support-section h3{margin:0 0 6px;font-size:16px}
+.support-link{background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;display:inline-block}
+.support-link:hover{opacity:0.95}
+.shortcuts{margin-top:12px;color:var(--text-dim)}
+.shortcuts h3{margin:0 0 6px;font-size:14px}
+.shortcuts ul{margin:0;padding-left:20px}
+.shortcuts kbd{background:#eee;border-radius:4px;padding:2px 6px;border:1px solid #ccc;font-family:monospace;display:inline-block}
+body.dark .shortcuts kbd{background:#333;border-color:#555;color:var(--fg)}
+.attribution{margin-top:14px;color:var(--text-dim);font-size:13px}
+.attribution a{color:var(--accent);text-decoration:none}
+.attribution a:hover{text-decoration:underline}
+.site-footer{grid-column:auto;text-align:center;padding:12px 8px;color:var(--text-dim);background:transparent;border-top:1px solid var(--border-color);width:100%;margin-top:12px}
+@media (max-width:880px){
+  .container{grid-template-columns:1fr;}
+  .left,.right{order:2}
+  .center{order:1}
+  /* On small screens keep left column content at the top */
+  .left{justify-content:flex-start}
+  /* Reset grid column spans for single-column layout */
+  .left,.center,.right{grid-column:auto}
+}

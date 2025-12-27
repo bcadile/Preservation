@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Viva la Preservation Coffee</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="col left">
+      <div class="left-header">
+        <h1>Viva la Preservation Coffee</h1>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+      </div>
+      <p class="subhead">Preservation Coffee & Tea has long been a heartbeat of downtown Modesto, tucked into its familiar 
+                        spot at 1030 J Street where countless locals have gathered over the years. More than a café, it 
+                        became a creative refuge. It was a place where students studied, friends reconnected, artists found inspiration, 
+                        and the community simply breathed a little easier. </br></br>
+                        
+                        As Preservation prepares to close its doors, its impact remains unmistakable. 
+                        The sounds featured on this site are real atmospheric recordings from inside the shop. They offer a small but 
+                        meaningful way for past customers to revisit the warmth, chatter, and gentle hum that made the space feel 
+                        like home. Preservation Coffee & Tea may be leaving, but its spirit, memories, and 
+                        the community it nurtured will continue to resonate.
+</p>
+      <nav class="socials" aria-label="social links">
+        <a href="https://www.instagram.com/prescoffeetea" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in new tab)" title="Instagram (opens in new tab)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path fill="none" d="M0 0h24v24H0z"/>
+            <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm5.5-3a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z"/>
+          </svg>
+          <span class="visually-hidden">Instagram</span>
+        </a>
+        <!-- <a href="#" aria-label="GitHub link">GitHub</a>
+        <a href="#" aria-label="LinkedIn link">LinkedIn</a> -->
+      </nav>
+    </aside>
+
+    <main class="col center">
+      <section class="player">
+        <div class="logo-wrap" aria-hidden="false">
+          <img id="logo" class="logo" src="image/logo.svg" alt="Preservation logo" loading="lazy">
+        </div>
+        <h2></h2>
+
+        <!-- Default: local file in sound/preservation.m4a. Use the file picker to change. -->
+        <audio id="audio" src="sound/preservation.aac" preload="auto"></audio>
+
+        <div class="source-row">
+          <div class="source">Source: <span id="sourceName">preservation.m4a</span></div>
+          <label class="change-file" aria-label="Choose recording">
+            <select id="sourceSelect" class="change-file" aria-label="Choose recording">
+              <option value="sound/preservation.aac">preservation.aac</option>
+              <option value="sound/preservation2.aac">preservation2.aac</option>
+            </select>
+          </label>
+        </div> 
+
+        <div class="controls" role="region" aria-label="audio player controls">
+          <button id="playBtn" class="btn">Play</button>
+          <label class="visually-hidden" for="volume">Volume</label>
+          <input id="volume" type="range" min="0" max="100" value="80">
+
+          <label for="loop" class="loop-label">
+            <input id="loop" type="checkbox"> Loop
+          </label>
+
+        </div>
+
+        <div class="progress-wrap">
+          <div id="progress" class="progress" title="Seek">
+            <span id="progress-bar"></span>
+          </div>
+          <div class="time">
+            <span id="current">0:00</span> / <span id="duration">0:00</span>
+          </div>
+        </div>
+
+        <div id="hint" class="hint" role="status" aria-live="polite" aria-hidden="true"></div>
+
+        <div id="status" class="status" aria-live="polite"></div>
+
+        <div class="shortcuts" aria-hidden="false">
+          <h3>Keyboard shortcuts</h3>
+          <ul>
+            <li><kbd>Space</kbd> Play / Pause</li>
+            <li><kbd>←</kbd> Previous track</li>
+            <li><kbd>→</kbd> Next track</li>
+            <li><kbd>↑</kbd> Volume + (5%)</li>
+            <li><kbd>↓</kbd> Volume - (5%)</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="attribution">This page is an independent tribute and is not affiliated with, endorsed by, or created in partnership with Preservation Coffee &amp; Tea. All trademarks and images remain the property of their respective owners and are used here for historical and commemorative purposes. </br> Powered by <a href="https://www.bacongrease.co" target="_blank" rel="noopener noreferrer">Bacon Grease Labs</a></div>
+      </footer>
+
+    </main>
+
+    <aside class="col right">
+      <div class="support-section">
+        <h3>Support this project</h3>
+        <p>If you'd like to help preserve this work, you can <strong>buy me a coffee</strong>:</p>
+        <a class="support-link" href="https://buymeacoffee.com/bcadile" target="_blank" rel="noopener noreferrer">Buy me a coffee ☕</a>
+      </div>
+    </aside>
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
