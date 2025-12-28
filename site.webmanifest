@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Viva La Preservation",
+  "short_name": "VivaLaPreservation",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
